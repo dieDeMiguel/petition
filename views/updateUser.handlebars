@@ -1,0 +1,26 @@
+{{>header home=true}}
+    {{>topForm}}
+                 <label class="fname-label" for="fname">First Name</label>
+                <input class="fname-input" id="fname" type="text" name="first_name" value="{{ first_name }}">
+
+                 <label class="fname-label" for="fname">Last Name</label>
+                <input class="fname-input" id="lastName" type="text" name="last_name" value="{{last_name}}">
+
+                 <label class="fname-label" for="fname">E-mail</label>
+                <input class="fname-input" id="email" type="email" name="email" value="{{ email }}">
+
+                <label class="fname-label" for="fname">Password</label>
+                <input class="fname-input" id="password" type="password" name="password">
+
+                <label class="fname-label" for="fname">Age</label>
+                <input class="fname-input" id="age" type="number" name="age" value="{{ age }}">
+
+                <label class="lname-label" for="lname">City</label>
+                <input class="lname-input" id="city" type="text" name="city" value="{{ city }}">
+
+                <label class="lname-label" for="lname">Web Page URL</label>
+                <input class="lname-input" id="url" type="text" name="url" value="{{ url }}">
+                 <h2 class="section-title"><a href="/">Go back to your signature</a></h2>
+    {{>bottomForm}}
+{{>footer}}
+

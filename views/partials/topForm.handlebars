@@ -1,0 +1,9 @@
+ <main class="main-template main-grid">
+    <h1 class="page-title">"{{firstHeader}}"</h1>
+    <p class="subtitle">{{subtitle}}</p>
+    <div class="main-text">
+        {{#if error}}<p class="subtitle" style="color: red; font-weight:bold;">Error Message: {{error}}</p> {{/if}}
+        <form id="test" class="contact-form"  action="/{{actionPage}}"
+    method="POST"
+    enctype="application/x-www-form-urlencoded multipart/form-data text/plain">
+    <input type="hidden" name="_csrf" value={{csrfToken}}>       

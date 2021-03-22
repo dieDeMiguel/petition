@@ -1,0 +1,17 @@
+<header class="header main-grid">
+    <div class="header-content">
+        <button aria-label="open navigation" class="open-nav">&#9776;</button>
+        <nav class="nav">
+            <button aria-label="close navigation" class="close-nav">&times;</button>
+            <ul class="nav-list">
+                {{#checkIfHome _session}}
+                     <li class="nav-item"><a href="/signers" class="nav-link {{#if signers}}current{{/if}}">All Signers</a></li>
+                    <li class="nav-item"><a href="/signature" class="nav-link {{#if signed}}current{{/if}}">Your Signature</a></li>
+                {{else}}
+                     <li class="nav-item"><a href="/" class="nav-link {{#if home}}current{{/if}}">Home</a></li>
+                     <li class="nav-item"><a href="/signers" class="nav-link {{#if signers}}current{{/if}}">All Signers</a></li> 
+                {{/checkIfHome}}
+            </ul>
+        </nav>
+    </div>
+</header>

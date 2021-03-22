@@ -1,0 +1,26 @@
+{{>header}}
+
+    <div class="container container-flex">
+
+            <main class="main-template main-grid">
+                
+                <h1 class="page-title">Thanks for Signing!</h1>
+                <p class="subtitle">Together we are going to change the face of Eimsbüttel. We can do it!</p>
+
+                
+                <div class="main-text">
+                    <h2 class="section-title">Verpackung Inititive 2021</h2>
+                    <p class="subtitle"> {{signatures.length}} people have already Signed in {{city}}</p>
+                </div>
+                 <ul>
+                    {{#signatures}}
+                           
+                        <li>{{first_name}} {{last_name}} {{#if age}}Age: {{age}}{{/if}} {{#if city}}City: {{city}}{{/if}} {{#if url}}<a href="/{{url}}">WebPage</a>{{/if}}</li>
+
+                    {{/signatures}}
+                </ul> 
+            </main>
+        
+        </div>
+{{>footer}}
+

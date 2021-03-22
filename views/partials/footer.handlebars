@@ -1,0 +1,21 @@
+ <footer class="footer main-grid">
+    <div class="footer-main">
+        {{#if _session}}
+            <p class="footer-text"> 
+                <form action="/logout" method="POST">
+                <input type="hidden" name="_csrf" value={{csrfToken}}>    
+                    <button type="submit" class="link-to-button">Logout</button>
+                </form>
+            </p>
+        {{else}}
+              <p class="footer-text"><a href="/login">Login</a></p>
+              <p class="footer-text"><a href="/">Register</a></p>
+        {{/if}}
+    </div>
+    
+    <ul class="social-list">
+        <li class="social-item"><a href="#" class="social-link"><i class="fab fa-facebook-square"></i></a></li>
+        <li class="social-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+        <li class="social-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+    </ul>            
+</footer>

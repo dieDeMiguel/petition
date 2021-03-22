@@ -1,0 +1,31 @@
+{{>header signed=true}}
+     <div class="container container-flex">
+         <main class="main-template main-grid">
+            <h1 class="page-title">Thanks for Signing!</h1>
+            <p class="subtitle">Together we are going to change the face of Eimsbüttel. We can do it!</p>   
+            <div class="main-text">
+                {{#if error}}<p class="subtitle" style="color: red; font-weight:bold;">Error Message: {{error}}</p>
+                    <h2 class="section-title"><a href="/petition/signers">Click here to see all signers</a></h2>
+                {{else}}
+                    <h2 class="section-title">You are part of change {{name}}!</h2>
+                    <p>Your signature helps to move our Bürger initiative forward and make a difference </p>
+                    {{#if signature}}
+                        <p>Your signature:</p>
+                        <img src="{{signature}}" alt="" style="border: 1px solid black;">
+                        <h2 class="section-title"><a href="/signers">Click here to see all {{count}} signers</a></h2>
+                         <h2 class="section-title"><a href="/update">Update Profile</a></h2>
+                         <form action="/unsign" method="post">
+                            <button type="submit" onclick="signatureDelete()" class="link-to-button">Delete Your Signature</button>
+                            <input type="hidden" name="_csrf" value={{csrfToken}}>   
+                         </form>
+                    {{/if}}
+                {{/if}}
+                <script>
+                    function signatureDelete() {
+                    alert("Are you sure you want to delete your signature?");
+                    }
+                </script>
+            </div>
+        </main>
+    </div> 
+{{>footer}}
